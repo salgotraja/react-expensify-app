@@ -1,11 +1,13 @@
 const path = require('path');
 
 // webpack.config.js
-var HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (env) => {
    const isProduction = env === 'production';
-   
+   const CSSExtract = new ExtractTextPlugin('styles.css');
+
    return {
       entry: './src/app.js',
       output: {
@@ -19,19 +21,31 @@ module.exports = (env) => {
             exclude: /node_modules/
          }, {
             test: /\.s?css$/,
-            use: [
-               'style-loader',
-               'css-loader',
-               'sass-loader'
-            ]
+            use: CSSExtract.extract({
+               use: [
+                  {
+                     loader: 'css-loader',
+                     options: {
+                        sourceMap: true
+                     }
+                  },
+                  {
+                     loader: 'sass-loader',
+                     options: {
+                        sourceMap: true
+                     }
+                  }
+               ]
+            })
          }]
       },
-      devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
+      devtool: isProduction ? 'source-map' : 'inline-source-map',
       devServer: {
          contentBase: path.join(__dirname, 'public'),
          historyApiFallback: true
       },
       plugins: [
+         CSSExtract,
          new HardSourceWebpackPlugin({
             // Either an absolute path or relative to webpack's options.context.
             cacheDirectory: 'node_modules/.cache/hard-source/[confighash]',
