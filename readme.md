@@ -16,7 +16,10 @@ Basic React.js budgeting app
 * Run the web app locally by following below steps:
 
 1. Clone app from github master branch
-2. Add dependencies by running yarn install
+2. Add dependencies by running 
+```
+    - yarn install
+```
 3. Run app by using following command:
 
   ## For production:
@@ -26,6 +29,6 @@ Basic React.js budgeting app
   ```  
   ## For local dev environment
   ```
-    yarn run dev-server
+    - yarn run dev-server
   ```
 4. Browse the app at http://yourdomain:3000

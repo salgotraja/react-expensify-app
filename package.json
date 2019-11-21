@@ -5,7 +5,6 @@
   "author": "Jagdish Salgotra",
   "license": "MIT",
   "scripts": {
-    "serve": "live-server public/",
     "build:dev": "webpack  --mode=development",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
@@ -21,14 +20,9 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "css-loader": "^3.2.0",
-    "enzyme": "3.0.0",
-    "enzyme-adapter-react-16": "1.0.0",
-    "enzyme-to-json": "3.0.1",
+    "css-loader": "^3.2.0",   
     "express": "^4.17.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "jest": "20.0.4",
-    "live-server": "^1.2.1",
     "moment": "^2.24.0",
     "node-sass": "^4.13.0",
     "normalize.css": "^8.0.1",
@@ -40,17 +34,21 @@
     "react-modal": "^3.11.1",
     "react-redux": "^7.1.3",
     "react-router-dom": "^5.1.2",
-    "react-test-renderer": "16.0.0",
     "redux": "^4.0.4",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "uuid": "^3.3.3",
     "validator": "^12.0.0",
-    "webpack": "^4.41.2",
-    "webpack-dev-server": "^3.9.0"
+    "webpack": "^4.41.2"
   },
   "devDependencies": {
+    "enzyme": "3.0.0",
+    "enzyme-adapter-react-16": "1.0.0", 
+    "enzyme-to-json": "3.0.1",
     "hard-source-webpack-plugin": "^0.13.1",
-    "webpack-cli": "^3.3.10"
+    "jest": "20.0.4",
+    "react-test-renderer": "16.0.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   }
 }
