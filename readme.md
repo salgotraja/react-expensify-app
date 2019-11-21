@@ -26,6 +26,6 @@ Basic React.js budgeting app
   ```  
   ## For local dev environment
   ```
-    - yarn run dev-server
-   ```
-4. Browse the app at http://<yourdomain>:3000
+    yarn run dev-server
+  ```
+4. Browse the app at http://yourdomain:3000
