@@ -17,9 +17,9 @@ Basic React.js budgeting app
 
 1. Clone app from github master branch
 2. Add dependencies by running 
-```
+  ```
     - yarn install
-```
+  ```
 3. Run app by using following command:
 
   ## For production:
