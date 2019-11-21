@@ -12,13 +12,20 @@ git log - View recent commits
 
 Basic React.js budgeting app 
 
-* Check the **[Live Demo](https://nodejs-pilot-weather-app.herokuapp.com/)**
+* Check the **[Live Demo](https://smacai-react-expensify.herokuapp.com/)**
 * Run the web app locally by following below steps:
 
-```
 1. Clone app from github master branch
 2. Add dependencies by running yarn install
 3. Run app by using following command:
-    yarn run dev-server
-4. Browse the app at http://localhost:8080
-```
+
+  ## For production:
+  ```
+    - yarn run build:prod
+    - yarn run serve
+  ```  
+  ## For local dev environment
+  ```
+    - yarn run dev-server
+   ```
+4. Browse the app at http://<yourdomain>:3000
