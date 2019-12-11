@@ -8,7 +8,7 @@ exports[`should render Header correctly 1`] = `
   <[object Object]
     activeClassName="is-active"
     exact={true}
-    to="/"
+    to="/dashboard"
   >
     Dashboard
   </[object Object]>
